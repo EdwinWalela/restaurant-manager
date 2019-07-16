@@ -21,10 +21,16 @@ a{
     font-size: 1.5em;
 }
 
+.menu-wrapper{
+    max-width:800px;
+    margin:auto;
+}
+
 .menu-item{
     border-radius: 5px;
     margin:10px auto;
     width:100%;
+    max-width: 600px;
     border-bottom:solid 1px #fff; 
     padding:20px;
     color:#fff;

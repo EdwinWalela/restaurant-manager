@@ -20,18 +20,20 @@ export default function OrderPage(props) {
             <Header 
                 title="Our Menu"
             />
-             <FoodSection 
-                title="Meals"
-                items={meals}
-            />
-           <FoodSection 
-                title="Sides"
-                items={sides}
-            />
-            <FoodSection 
-                title="Drinks"
-                items={drinks}
-            />
+            <div className="menu-wrapper">
+                <FoodSection 
+                    title="Meals"
+                    items={meals}
+                />
+                <FoodSection 
+                    title="Sides"
+                    items={sides}
+                />
+                <FoodSection 
+                    title="Drinks"
+                    items={drinks}
+                />
+            </div>
         </div>
     )
 }
