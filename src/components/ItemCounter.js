@@ -8,19 +8,18 @@ function ItemCounter(props) {
     return (
         <div className="item-counter">
             {itemCount > 0 ? <span>{itemCount}</span> :''}
-            
-            <button onClick={props.handleUserOrderChange.bind(this,props.itemId,0)} style={reduceBtnStyle}>-</button>
-            <button onClick={props.handleUserOrderChange.bind(this,props.itemId,1)} style={increaseBtnStyle}>+</button>
+           <button onClick={props.handleUserOrderChange.bind(this,props.itemId,1)} style={increaseBtnStyle}>+</button>
+           <button onClick={props.handleUserOrderChange.bind(this,props.itemId,0)} style={reduceBtnStyle}>-</button>
         </div>
     )
 }
 
 const reduceBtnStyle = {
-    background:'red'
+    background:'#333'
 }
 
 const increaseBtnStyle = {
-    background:'green'
+    background:'#FF1053'
 }
 
 ItemCounter.propTypes = {
