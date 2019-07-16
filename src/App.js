@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{ Component } from 'react';
 import './App.css';
+import data from './data';
+import OrderPage from './components/OrderPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    
+    state = {
+        menuItems:data.menuItemsData,
+        orders:data.ordersData,
+        userOrder:[]
+    }
+
+    render() {
+        return (
+            <div>
+                <OrderPage
+                    menuItems = {this.state.menuItems}
+                />
+            </div>
+        )
+    }
 }
 
 export default App;
