@@ -11,6 +11,8 @@ export default function FoodSection(props) {
                 <MenuItem
                     key={foodItem.id}
                     foodItem={foodItem}
+                    handleUserOrderChange={props.handleUserOrderChange}
+                    handleUserOrderCount = {props.handleUserOrderCount}
                 />
             ))}
         </div>
@@ -19,6 +21,8 @@ export default function FoodSection(props) {
 
 FoodSection.propTypes = {
     title:PropTypes.string,
+    handleUserOrderChange:PropTypes.func.isRequired,
+    handleUserOrderCount:PropTypes.func.isRequired,
     items:PropTypes.arrayOf(PropTypes.shape({
         id:Number,
         type:String,

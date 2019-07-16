@@ -24,14 +24,20 @@ export default function OrderPage(props) {
                 <FoodSection 
                     title="Meals"
                     items={meals}
+                    handleUserOrderChange={props.handleUserOrderChange}
+                    handleUserOrderCount={props.handleUserOrderCount}
                 />
                 <FoodSection 
                     title="Sides"
                     items={sides}
+                    handleUserOrderChange={props.handleUserOrderChange}
+                    handleUserOrderCount={props.handleUserOrderCount}
                 />
                 <FoodSection 
                     title="Drinks"
                     items={drinks}
+                    handleUserOrderChange={props.handleUserOrderChange}
+                    handleUserOrderCount={props.handleUserOrderCount}
                 />
             </div>
         </div>
@@ -46,7 +52,9 @@ OrderPage.propTypes = {
         name:String,
         ingredients:String,
         price:Number
-    })).isRequired
+    })).isRequired,
+    handleUserOrderCount:PropTypes.func.isRequired,
+    handleUserOrderChange:PropTypes.func.isRequired
 }
 
 
