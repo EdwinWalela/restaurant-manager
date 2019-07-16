@@ -6,7 +6,7 @@ import MenuItem from './MenuItem';
 export default function FoodSection(props) {
     return (
         <div className="food-section">
-            <h3>{props.title}</h3>
+            <h1>{props.title}</h1>
             {props.items.map(foodItem=>(
                 <MenuItem
                     key={foodItem.id}

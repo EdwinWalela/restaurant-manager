@@ -3,6 +3,7 @@ import './App.css';
 import data from './data';
 
 import OrderPage from './components/OrderPage';
+import Footer from './components/layout/Footer';
 
 class App extends Component {
     
@@ -18,6 +19,7 @@ class App extends Component {
                 <OrderPage
                     menuItems = {this.state.menuItems}
                 />
+                <Footer />
             </div>
         )
     }

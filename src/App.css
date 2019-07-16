@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a{
+    color:inherit;
+}
+
 
 .food-section{
     border-bottom:solid 3px rgb(#555,0.4);
@@ -12,8 +16,9 @@
     padding:20px;
 }
 
-.food-section h3{
-
+.food-section h1{
+    color:#555;
+    font-size: 1.5em;
 }
 
 .menu-item{
@@ -28,7 +33,7 @@
 
 .menu-item h3{
     display: inline-block;
-    font-weight: 100;
+    font-weight: 500;
     margin:5px;
     text-transform: capitalize;
 }
@@ -48,4 +53,12 @@
     padding:20px;
     color:#fff;
     text-align: center;
+}
+
+.footer{
+    margin-top: 100px;
+    text-align: center;
+    background:#555;
+    padding:20px;
+    color:#fff;
 }
