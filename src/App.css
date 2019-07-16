@@ -5,8 +5,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .food-section{
-    border-bottom:solid 1px;
+    border-bottom:solid 3px rgb(#555,0.4);
     margin:10px auto;
     padding:20px;
 }
@@ -16,11 +17,13 @@
 }
 
 .menu-item{
+    border-radius: 5px;
+    margin:10px auto;
     width:100%;
     border-bottom:solid 1px #fff; 
-    padding:15px;
+    padding:20px;
     color:#fff;
-    background:#555;
+    background:#058ED9;
 }
 
 .menu-item h3{
@@ -38,4 +41,11 @@
 .menu-item p{
     font-size: 0.85em;
     padding:0 5px;
+}
+
+.header h1{
+    background:#FF1053;
+    padding:20px;
+    color:#fff;
+    text-align: center;
 }

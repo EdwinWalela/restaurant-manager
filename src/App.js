@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import './App.css';
 import data from './data';
+
 import OrderPage from './components/OrderPage';
 
 class App extends Component {

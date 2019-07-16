@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
+import Header from './layout/Header';
 import FoodSection from './FoodSection';
 
 export default function OrderPage(props) {
@@ -15,6 +17,9 @@ export default function OrderPage(props) {
     })
     return (
         <div>
+            <Header 
+                title="Our Menu"
+            />
              <FoodSection 
                 title="Meals"
                 items={meals}
