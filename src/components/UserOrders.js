@@ -26,8 +26,10 @@ class UserOrders extends Component{
                         <li>{item.name} x {item.quantity} @ Ksh.{item.price.toLocaleString()}</li>
                     )
                 })}
+                
                 <div>Total : Ksh.{total}</div>
-                <button>Order Now</button>
+                {items.length !== 0 ? <button>Order Now</button> : '' }
+                
             </div>
         )
     }
