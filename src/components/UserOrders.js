@@ -8,18 +8,25 @@ class UserOrders extends Component{
     }
 
     render(){
+        let items = this.props.items;
         return (
-            <div className="user-orders">
-                <h3>My Order</h3>
-               {this.props.items.map(item=>{
-                   return (
-                       <li>name x quantity Ksh.300</li>
-                   )
-               })}
-            </div>
+            <React.Fragment>
+                <div className="user-orders">
+                    {items.length > 0 ? <h3>My Order</h3> : <h3>No item selected</h3>}
+                    {items.map(item=>{
+                        return (
+                            <li>{item.id} x {item.quantity} </li>
+                        )
+                    })}
+                    <div>Total : Ksh.1200</div>
+                    <button>Order Now</button>
+                </div>
+                
+            </React.Fragment>
         )
     }
 }
+
 
 UserOrders.propTypes = {
     items:PropTypes.shape({

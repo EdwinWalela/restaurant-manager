@@ -93,6 +93,31 @@ li{
     max-width: 550px;
 }
 
+.user-orders div{
+    width:95%;
+    margin:10px auto;
+    border:solid 1px;
+    padding:10px;
+    text-align: center;
+    background: #fff;
+    color:#333;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.user-orders button{
+    display: block;
+    width:95%;
+    margin:10px auto;
+    border:none;
+    padding:10px;
+    text-align: center;
+    background: #FF1053;
+    color:#fff;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
 .user-orders h3{
     color:#FF1053;
 }
