@@ -13,7 +13,7 @@ class App extends Component {
         userOrder:[]
     }
 
-    changeQuantity(item,mode){
+    changeQuantity = (item,mode)=>{
         let newItem = item;
         
         if(mode === 1){
@@ -27,6 +27,7 @@ class App extends Component {
     }
 
     handleUserOrderCount = (id) =>{
+
        let count = this.state.userOrder.filter(item=>{
             return item.id === id;
        })[0];

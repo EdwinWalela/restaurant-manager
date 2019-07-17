@@ -54,6 +54,12 @@ a{
     padding:0 5px;
 }
 
+.header{
+    top:0;
+    position: fixed;
+    width: 100%;
+}
+
 .header h1{
     background:#FF1053;
     padding:20px;
