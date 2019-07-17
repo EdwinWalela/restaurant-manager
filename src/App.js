@@ -80,6 +80,7 @@ class App extends Component {
         return (
             <div>
                 <OrderPage
+                    userOrder = {this.state.userOrder}
                     handleUserOrderDisplay = {this.handleUserOrderDisplay}
                     userOrderDisplay = {this.state.userOrderDisplay}
                     menuItems = {this.state.menuItems}

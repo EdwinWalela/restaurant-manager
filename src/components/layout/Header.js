@@ -9,12 +9,16 @@ function Header(props) {
         <i class="fas fa-bars" onClick={props.handleUserOrderDisplay}></i>
             <h1>{props.title}</h1>
 
-            {props.userOrderDisplay ? <UserOrders /> : ''}
+            {props.userOrderDisplay ? <UserOrders items={props.userOrder} /> : ''}
         </div>
     )
 }
 
 Header.propTypes = {
+    userOrder:PropTypes.shape({
+        id:Number,
+        quantity:Number
+    }).isRequired,
     title:PropTypes.string,
     userOrderDisplay:PropTypes.bool,
     handleUserOrderDisplay:PropTypes.func.isRequired

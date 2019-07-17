@@ -18,6 +18,7 @@ export default function OrderPage(props) {
     return (
         <div>
             <Header 
+                userOrder={props.userOrder}
                 handleUserOrderDisplay={props.handleUserOrderDisplay}
                 userOrderDisplay={props.userOrderDisplay}
                 title="Our Menu"
@@ -48,6 +49,10 @@ export default function OrderPage(props) {
 
 // PropTypes
 OrderPage.propTypes = {
+    userOrder:PropTypes.shape({
+        id:Number,
+        quantity:Number
+    }).isRequired,
     menuItems:PropTypes.arrayOf(PropTypes.shape({
         id:Number,
         type:String,
