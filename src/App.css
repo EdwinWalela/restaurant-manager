@@ -67,6 +67,22 @@ a{
     text-align: center;
 }
 
+.fa-bars{
+    margin:10px;
+    font-size: 2em;
+    padding:5px;
+    float: right;
+}
+
+.user-orders{
+    background: #333;
+    padding:20px;
+    float: right;
+    color:#fff;
+    width: 70%;
+    max-width: 450px;
+}
+
 .item-counter{
     text-align: right;
 }

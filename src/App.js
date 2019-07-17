@@ -10,7 +10,14 @@ class App extends Component {
     state = {
         menuItems:data.menuItemsData,
         orders:data.ordersData,
-        userOrder:[]
+        userOrder:[],
+        userOrderDisplay:false
+    }
+
+    handleUserOrderDisplay = () =>{
+        this.setState({
+            userOrderDisplay:!this.state.userOrderDisplay
+        })
     }
 
     changeQuantity = (item,mode)=>{
@@ -73,6 +80,8 @@ class App extends Component {
         return (
             <div>
                 <OrderPage
+                    handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                    userOrderDisplay = {this.state.userOrderDisplay}
                     menuItems = {this.state.menuItems}
                     handleUserOrderChange = {this.handleUserOrderChange}
                     handleUserOrderCount = {this.handleUserOrderCount}
