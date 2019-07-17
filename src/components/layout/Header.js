@@ -17,6 +17,8 @@ function Header(props) {
 Header.propTypes = {
     userOrder:PropTypes.shape({
         id:Number,
+        name:String,
+        price:Number,
         quantity:Number
     }).isRequired,
     title:PropTypes.string,

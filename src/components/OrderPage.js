@@ -51,6 +51,8 @@ export default function OrderPage(props) {
 OrderPage.propTypes = {
     userOrder:PropTypes.shape({
         id:Number,
+        name:String,
+        price:Number,
         quantity:Number
     }).isRequired,
     menuItems:PropTypes.arrayOf(PropTypes.shape({

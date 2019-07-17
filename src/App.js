@@ -68,6 +68,8 @@ class App extends Component {
 
         let newOrder = {
             id:menuItem.id,
+            name:menuItem.name,
+            price:menuItem.price,
             quantity:1
         }
         // Add new item to state

@@ -102,7 +102,7 @@ li{
     background: #fff;
     color:#333;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .user-orders button{
@@ -116,6 +116,13 @@ li{
     color:#fff;
     font-weight: 600;
     font-size: 1.2em;
+    transition: all linear .3s;
+}
+
+.user-orders button:hover{
+    transition: all linear .3s;
+    color: #FF1053;
+    background:#fff;
 }
 
 .user-orders h3{
