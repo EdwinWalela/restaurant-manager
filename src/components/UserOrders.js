@@ -1,21 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class UserOrders extends Component{
-    state = {
-
-    }
-
-    render(){
+function UserOrders(props){
         // Filter out items with quantity of 0
-        let items = this.props.items.filter(item=>{
+        let items = props.items.filter(item=>{
             return item.quantity !== 0;
         });
         // Calculate order total
-        let total = items.reduce((a,b)=>{
-                console.log(a);
-                console.log(b);
-                return a + (b.price * b.quantity)
+        let total = items.reduce((total,item)=>{
+                return total + (item.price * item.quantity)
             },0).toLocaleString();
 
         return (
@@ -31,7 +24,6 @@ class UserOrders extends Component{
                 {items.length !== 0 ? <button style={buttonStyle}>Order Now</button> : '' }
             </div>
         )
-    }
 }
 
 const userOrderStyle = {
