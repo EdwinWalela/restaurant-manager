@@ -25,6 +25,8 @@ function UserOrders(props){
 }
 
 const userOrderStyle = {
+    right:'0vw',
+    position:'absolute',
     background: '#333',
     padding:'10px 20px',
     float: 'right',
