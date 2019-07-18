@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 function UserOrders(props){
-        // Filter out items with quantity of 0
-        let items = props.items.filter(item=>{
-            return item.quantity !== 0;
-        });
+        let items = props.items;
+        
         // Calculate order total
         let total = items.reduce((total,item)=>{
                 return total + (item.price * item.quantity)

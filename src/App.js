@@ -57,7 +57,9 @@ class App extends Component {
         if(itemExists){
              // Update state
             this.setState({
-                userOrder:this.state.userOrder
+                userOrder:this.state.userOrder.filter(item=>{
+                    return item.quantity !==0
+                })
             })
             return;
         }
