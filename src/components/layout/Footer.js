@@ -1,9 +1,19 @@
 import React from 'react'
 
-export default function Footer() {
+function Footer() {
     return (
-        <div className="footer">
+        <div style={footerStyle}>
            <p>Made with love by <a href="#">Edwin Walela</a></p>
         </div>
     )
 }
+
+const footerStyle = {
+    marginTop: '100px',
+    textAlign:'center',
+    background:'#555',
+    padding:'20px',
+    color:'#fff'
+}
+
+export default Footer;
