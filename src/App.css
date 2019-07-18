@@ -58,32 +58,6 @@ li{
     padding:0 5px;
 }
 
-.header{
-    top:0;
-    position: fixed;
-    width: 100%;
-}
-
-.header h1{
-    background:#FF1053;
-    padding:20px;
-    color:#fff;
-    text-align: center;
-}
-
-.fa-bars{
-    margin:10px;
-    font-size: 2em;
-    padding:5px;
-    float: right;
-    transition:all linear .1s;
-}
-
-.fa-bars:active{
-    transition:all linear .1s;
-    color:#fff;
-}
-
 .user-orders{
     background: #333;
     padding:10px 20px;
