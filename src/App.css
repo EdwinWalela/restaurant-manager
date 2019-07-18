@@ -20,46 +20,10 @@ button{
 }
 
 button:active,i:active{
-    transform:scale(0.9);
+    transform:scale(0.8);
 }
 
 .menu-wrapper{
     max-width:800px;
     margin:100px auto 10px auto;
-}
-
-.menu-item p{
-    font-size: 0.85em;
-    padding:0 5px;
-}
-
-
-.item-counter{
-    text-align: right;
-}
-
-.item-counter button{
-    color:#fff;
-    border:none;
-    padding:5px;
-    font-size: 1.2em;
-    width:50px;
-    border:solid 1px transparent;
-    transition: all linear .2s;
-}
-
-.item-counter button:active{
-    border:solid 1px #fff;
-    transition: all linear .2s;
-    transform: scale(0.8);
-}
-
-.item-counter span{
-    color:#333;
-    background:#fff;
-    border-radius: 5px;
-    padding:5px 10px;
-    font-size: 1.1em;
-    font-weight: 600;
-    margin:10px;
 }
