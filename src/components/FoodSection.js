@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 import MenuItem from './MenuItem';
 
-export default function FoodSection(props) {
+function FoodSection(props) {
     return (
-        <div className="food-section">
-            <h1>{props.title}</h1>
+        <div style={foodSectionStyle}>
+            <h1 style={titleStyle}>{props.title}</h1>
             {props.items.map(foodItem=>(
                 <MenuItem
                     key={foodItem.id}
@@ -17,6 +17,16 @@ export default function FoodSection(props) {
             ))}
         </div>
     )
+}
+
+const foodSectionStyle = {
+    margin:'10px auto',
+    padding:'20px'
+}
+
+const titleStyle = {
+    color:'#555',
+    fontSize:'1.5em'
 }
 
 FoodSection.propTypes = {
@@ -31,3 +41,5 @@ FoodSection.propTypes = {
         price:Number
     })).isRequired
 }
+
+export default FoodSection;

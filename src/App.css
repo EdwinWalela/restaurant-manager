@@ -23,18 +23,6 @@ button:active,i:active{
     transform:scale(0.9);
 }
 
-
-.food-section{
-    border-bottom:solid 3px rgb(#555,0.4);
-    margin:10px auto;
-    padding:20px;
-}
-
-.food-section h1{
-    color:#555;
-    font-size: 1.5em;
-}
-
 .menu-wrapper{
     max-width:800px;
     margin:100px auto 10px auto;
