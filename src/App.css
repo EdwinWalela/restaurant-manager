@@ -22,8 +22,3 @@ button{
 button:active,i:active{
     transform:scale(0.8);
 }
-
-.menu-wrapper{
-    max-width:800px;
-    margin:100px auto 10px auto;
-}

@@ -23,7 +23,7 @@ export default function OrderPage(props) {
                 userOrderDisplay={props.userOrderDisplay}
                 title="Our Menu"
             />
-            <div className="menu-wrapper">
+            <div style={menuWrapperStyle}>
                 <FoodSection 
                     title="Meals"
                     items={meals}
@@ -45,6 +45,11 @@ export default function OrderPage(props) {
             </div>
         </div>
     )
+}
+
+const menuWrapperStyle = {
+    maxWidth:'800px',
+    margin:'100px auto 10px auto'
 }
 
 // PropTypes
