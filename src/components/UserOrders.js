@@ -19,20 +19,58 @@ class UserOrders extends Component{
             },0).toLocaleString();
 
         return (
-            <div className="user-orders">
-                {items.length > 0 ? <h3>My Order</h3> : <h3>No item selected</h3>}
+            <div style={userOrderStyle}>
+                 <h3 style={titleStyle}> {items.length > 0 ?'My Order':'No item selected'} </h3>
                 {items.map(item=>{
                     return (
-                        <li>{item.name} x {item.quantity} @ Ksh.{item.price.toLocaleString()}</li>
+                        <li style={listStyle} >{item.name} x {item.quantity} @ Ksh.{item.price.toLocaleString()}</li>
                     )
                 })}
                 
-                <div>Total : Ksh.{total}</div>
-                {items.length !== 0 ? <button>Order Now</button> : '' }
-                
+                <h3 style={totalStyle}>Total : Ksh.{total}</h3>
+                {items.length !== 0 ? <button style={buttonStyle}>Order Now</button> : '' }
             </div>
         )
     }
+}
+
+const userOrderStyle = {
+    background: '#333',
+    padding:'10px 20px',
+    float: 'right',
+    color:'#fff',
+    width: '100%',
+    maxWidth:'400px'
+}
+
+const titleStyle = {
+    color:'#FF1053'
+}
+
+const totalStyle = {
+    width:'95%',
+    margin:'10px auto',
+    border:'solid 1px',
+    padding:'10px',
+    textAlign:'center',
+    background:'#fff',
+    color:'#333',
+    fontWeight:'600'
+}
+
+const listStyle = {
+    padding:'20px',
+    margin:'0px 10px',
+    borderBottom:'solid 1px'
+}
+
+const buttonStyle = {
+    width:'95%',
+    margin:'10px auto',
+    padding:'10px',
+    background:'#FF1053',
+    color:'#fff',
+    fontWeight:'600',
 }
 
 
