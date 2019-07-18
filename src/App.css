@@ -28,29 +28,6 @@ button:active,i:active{
     margin:100px auto 10px auto;
 }
 
-.menu-item{
-    border-radius: 5px;
-    margin:10px auto;
-    width:100%;
-    max-width: 600px;
-    border-bottom:solid 1px #fff; 
-    padding:20px;
-    color:#fff;
-    background:#058ED9;
-}
-
-.menu-item h3{
-    display: inline-block;
-    font-weight: 500;
-    margin:5px;
-    text-transform: capitalize;
-}
-
-.menu-item h4{
-    float:right;
-    margin:5px;
-}
-
 .menu-item p{
     font-size: 0.85em;
     padding:0 5px;
