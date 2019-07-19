@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { NavLink } from 'react-router-dom'
 
 function UserOrders(props){
     return (
         <div style={userOrderStyle}>
             <h3 style={titleStyle}> Reactive Restaurant</h3>
-            <li style={listStyle}>Orders</li>
-            <li style={listStyle}>Menu</li>
-            <li style={listStyle}>Home</li>
+            <NavLink to="/orders"><li style={listStyle}>Orders</li></NavLink>
+            <NavLink to="/our-menu"><li style={listStyle}>Menu</li></NavLink>
+            <NavLink exact to="/"><li style={listStyle}>Home</li></NavLink>
             <div style={socialBarStyle}>
                 <i style={socialIconStyle} class="fab fa-facebook-square"></i>
                 <i style={socialIconStyle} class="fab fa-twitter-square"></i>

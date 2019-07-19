@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Header from '../layout/Header';
 import FoodSection from './FoodSection';
 
-export default function OrderPage(props) {
+function OrderPage(props) {
     let sides = props.menuItems.filter(item=>{
         return item.type === "side"
     })
@@ -77,4 +77,4 @@ OrderPage.propTypes = {
     handleNavigationDisplay:PropTypes.func.isRequired
 }
 
-
+export default OrderPage;

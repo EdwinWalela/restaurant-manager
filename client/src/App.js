@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import {BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import data from './data';
 
@@ -89,19 +90,24 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <OrderPage
-                    userOrder = {this.state.userOrder}
-                    handleNavigationDisplay = {this.handleNavigationDisplay}
-                    handleUserOrderDisplay = {this.handleUserOrderDisplay}
-                    navigationDisplay = {this.state.navigationDisplay}
-                    userOrderDisplay = {this.state.userOrderDisplay}
-                    menuItems = {this.state.menuItems}
-                    handleUserOrderChange = {this.handleUserOrderChange}
-                    handleUserOrderCount = {this.handleUserOrderCount}
-                />
-                <Footer />
-            </div>
+            <Router>
+                <div>
+                    <Route path="/our-menu" render={
+                        ()=> <OrderPage
+                                userOrder = {this.state.userOrder}
+                                handleNavigationDisplay = {this.handleNavigationDisplay}
+                                handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                                navigationDisplay = {this.state.navigationDisplay}
+                                userOrderDisplay = {this.state.userOrderDisplay}
+                                menuItems = {this.state.menuItems}
+                                handleUserOrderChange = {this.handleUserOrderChange}
+                                handleUserOrderCount = {this.handleUserOrderCount}
+                            /> 
+                        } />
+                        <Route path="/orders" render={<Footer/>} />
+                    <Footer />
+                </div>
+            </Router>
         )
     }
 }
