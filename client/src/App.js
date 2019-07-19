@@ -11,13 +11,18 @@ class App extends Component {
         menuItems:data.menuItemsData,
         orders:data.ordersData,
         userOrder:[],
-        userOrderDisplay:false
+        userOrderDisplay:false,
+        navigationDisplay:false
     }
 
     handleUserOrderDisplay = () =>{
         this.setState({
             userOrderDisplay:!this.state.userOrderDisplay
         })
+    }
+
+    handleNavigationDisplay = () =>{
+
     }
 
     changeQuantity = (item,mode)=>{
