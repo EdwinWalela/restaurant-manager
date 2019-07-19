@@ -22,7 +22,9 @@ class App extends Component {
     }
 
     handleNavigationDisplay = () =>{
-
+        this.setState({
+            navigationDisplay:!this.state.navigationDisplay
+        })
     }
 
     changeQuantity = (item,mode)=>{
@@ -90,7 +92,9 @@ class App extends Component {
             <div>
                 <OrderPage
                     userOrder = {this.state.userOrder}
+                    handleNavigationDisplay = {this.handleNavigationDisplay}
                     handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                    navigationDisplay = {this.state.navigationDisplay}
                     userOrderDisplay = {this.state.userOrderDisplay}
                     menuItems = {this.state.menuItems}
                     handleUserOrderChange = {this.handleUserOrderChange}

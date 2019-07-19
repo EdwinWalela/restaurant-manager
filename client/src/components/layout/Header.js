@@ -7,11 +7,11 @@ import Navigation from '../layout/Navigation';
 function Header(props) {
     return (
         <div style={headerStyle}>
-            <i className="fa fa-bars" style={orderButtonStyle}></i>
+            <i style={orderButtonStyle} onClick={props.handleNavigationDisplay} className="fa fa-bars" ></i>
             <i style={orderButtonStyle} onClick={props.handleUserOrderDisplay} class="fas fa-shopping-cart"></i>
             <h1 style={titleStyle}>{props.title}</h1>
             {props.userOrderDisplay ? <UserOrders items={props.userOrder} /> : ''}
-            <Navigation items={[]} />
+            {props.navigationDisplay ? <Navigation /> : ''}
         </div>
     )
 }
@@ -47,8 +47,10 @@ Header.propTypes = {
         quantity:Number
     }).isRequired,
     title:PropTypes.string,
-    userOrderDisplay:PropTypes.bool,
-    handleUserOrderDisplay:PropTypes.func.isRequired
+    userOrderDisplay:PropTypes.bool.isRequired,
+    navigationDisplay:PropTypes.bool.isRequired,
+    handleUserOrderDisplay:PropTypes.func.isRequired,
+    handleNavigationDisplay:PropTypes.func.isRequired
 }
 
 export default Header
