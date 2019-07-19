@@ -4,7 +4,7 @@ import './App.css';
 import data from './data';
 
 import MenuPage from './components/menu/MenuPage';
-import OrdersContainer from './components/orders/OrdersContainer';
+import OrdersPage from './components/orders/OrdersPage';
 import Footer from './components/layout/Footer';
 
 class App extends Component {
@@ -105,7 +105,16 @@ class App extends Component {
                                 handleUserOrderCount = {this.handleUserOrderCount}
                             /> 
                         } />
-                        <Route path="/orders" render={<Footer/>} />
+                    <Route path="/orders" render={
+                        ()=> <OrdersPage 
+                                userOrder = {this.state.userOrder}
+                                handleNavigationDisplay = {this.handleNavigationDisplay}
+                                handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                                navigationDisplay = {this.state.navigationDisplay}
+                                userOrderDisplay = {this.state.userOrderDisplay}
+                                menuItems = {this.state.menuItems}
+                            />
+                    } />
                     <Footer />
                 </div>
             </Router>
