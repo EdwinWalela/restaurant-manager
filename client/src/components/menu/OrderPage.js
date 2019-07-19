@@ -21,7 +21,7 @@ export default function OrderPage(props) {
                 userOrder={props.userOrder}
                 handleUserOrderDisplay={props.handleUserOrderDisplay}
                 userOrderDisplay={props.userOrderDisplay}
-                title="Our Menu"
+                title="The Menu"
             />
             <div style={menuWrapperStyle}>
                 <FoodSection 

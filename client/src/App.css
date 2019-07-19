@@ -10,7 +10,13 @@ a{
 }
 
 li{
-    list-style-type: none;
+    list-style-type: circle;
+}
+
+li:hover{
+    cursor: pointer;
+    color:#FF1053;
+    transition: all linear .3s;
 }
 
 button{
@@ -19,6 +25,7 @@ button{
     transition: all linear .3s;
 }
 
-button:active,i:active{
-    transform:scale(0.8);
+button:hover,i:hover{
+    transform:scale(0.95);
+    cursor: pointer;
 }

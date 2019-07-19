@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import UserOrders from '../UserOrders';
+import UserOrders from '../menu/UserOrders';
+import Navigation from '../layout/Navigation';
 
 function Header(props) {
     return (
         <div style={headerStyle}>
-            <i className="fa fa-bars" style={orderButtonStyle} onClick={props.handleUserOrderDisplay}></i>
+            <i className="fa fa-bars" style={orderButtonStyle}></i>
+            <i style={orderButtonStyle} onClick={props.handleUserOrderDisplay} class="fas fa-shopping-cart"></i>
             <h1 style={titleStyle}>{props.title}</h1>
             {props.userOrderDisplay ? <UserOrders items={props.userOrder} /> : ''}
+            <Navigation items={[]} />
         </div>
     )
 }

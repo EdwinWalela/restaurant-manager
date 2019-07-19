@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import './App.css';
 import data from './data';
 
-import OrderPage from './components/OrderPage';
+import OrderPage from './components/menu/OrderPage';
 import Footer from './components/layout/Footer';
 
 class App extends Component {
