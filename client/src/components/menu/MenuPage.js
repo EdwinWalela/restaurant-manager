@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Header from '../layout/Header';
 import FoodSection from './FoodSection';
 
-function OrderPage(props) {
+function MenuPage(props) {
     let sides = props.menuItems.filter(item=>{
         return item.type === "side"
     })
@@ -55,7 +55,7 @@ const menuWrapperStyle = {
 }
 
 // PropTypes
-OrderPage.propTypes = {
+MenuPage.propTypes = {
     userOrder:PropTypes.shape({
         id:Number,
         name:String,
@@ -77,4 +77,4 @@ OrderPage.propTypes = {
     handleNavigationDisplay:PropTypes.func.isRequired
 }
 
-export default OrderPage;
+export default MenuPage;

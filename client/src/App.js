@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import data from './data';
 
-import OrderPage from './components/menu/OrderPage';
+import MenuPage from './components/menu/MenuPage';
+import OrdersContainer from './components/orders/OrdersContainer';
 import Footer from './components/layout/Footer';
 
 class App extends Component {
@@ -93,7 +94,7 @@ class App extends Component {
             <Router>
                 <div>
                     <Route path="/our-menu" render={
-                        ()=> <OrderPage
+                        ()=> <MenuPage
                                 userOrder = {this.state.userOrder}
                                 handleNavigationDisplay = {this.handleNavigationDisplay}
                                 handleUserOrderDisplay = {this.handleUserOrderDisplay}
