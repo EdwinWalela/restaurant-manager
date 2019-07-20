@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Header from '../layout/Header';
 
-function Orders(props) {
+function OrderControl(props) {
     return (
         <React.Fragment>
             <Header  
@@ -19,7 +19,7 @@ function Orders(props) {
     )
 }
 
-Orders.propTypes = {
+OrderControl.propTypes = {
     userOrderDisplay:PropTypes.bool.isRequired,
     navigationDisplay:PropTypes.bool.isRequired,
     handleUserOrderDisplay:PropTypes.func.isRequired,
@@ -32,5 +32,5 @@ Orders.propTypes = {
     })).isRequired,
 }
 
-export default Orders
+export default OrderControl
 
