@@ -7,6 +7,7 @@ function Navigation(){
             <h3 style={titleStyle}> Reactive Restaurant</h3>
             <NavLink to="/orders"><li style={listStyle}>Orders</li></NavLink>
             <NavLink to="/our-menu"><li style={listStyle}>Menu</li></NavLink>
+            <NavLink to="/admin"><li style={listStyle}>Admin</li></NavLink>
             <NavLink exact to="/"><li style={listStyle}>Home</li></NavLink>
             <div style={socialBarStyle}>
                 <i style={socialIconStyle} class="fab fa-facebook-square"></i>

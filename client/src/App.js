@@ -5,6 +5,7 @@ import data from './data';
 
 import MenuPage from './components/menu/MenuPage';
 import OrdersPage from './components/orders/OrdersPage';
+import OrderControl from './components/admin/OrderControl';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
@@ -124,6 +125,16 @@ class App extends Component {
                                 navigationDisplay = {this.state.navigationDisplay}
                                 userOrderDisplay = {this.state.userOrderDisplay}
                             />
+                    } />
+                    <Route path="/admin" render={
+                        ()=> <OrderControl
+                                userOrder = {this.state.userOrder}
+                                orders = {this.state.orders}
+                                handleNavigationDisplay = {this.handleNavigationDisplay}
+                                handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                                navigationDisplay = {this.state.navigationDisplay}
+                                userOrderDisplay = {this.state.userOrderDisplay}
+                        />
                     } />
                 </div>
                 <Footer />
