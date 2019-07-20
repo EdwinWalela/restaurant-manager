@@ -8,7 +8,7 @@ function Header(props) {
     return (
         <div style={headerStyle}>
             <i style={orderButtonStyle} onClick={props.handleNavigationDisplay} className="fa fa-bars" ></i>
-            <i style={orderButtonStyle} onClick={props.handleUserOrderDisplay} class="fas fa-shopping-cart"></i>
+            <i style={orderButtonStyle} onClick={props.handleUserOrderDisplay} className="fas fa-shopping-cart"></i>
             <h1 style={titleStyle}>{props.title}</h1>
             {props.userOrderDisplay ? <UserOrders items={props.userOrder} /> : ''}
             {props.navigationDisplay ? <Navigation /> : ''}
@@ -40,12 +40,12 @@ const orderButtonStyle = {
 }
 
 Header.propTypes = {
-    userOrder:PropTypes.shape({
+    userOrder:PropTypes.arrayOf(PropTypes.shape({
         id:PropTypes.number,
         name:PropTypes.string,
         price:PropTypes.number,
         quantity:PropTypes.number
-    }).isRequired,
+    })).isRequired,
     title:PropTypes.string,
     userOrderDisplay:PropTypes.bool.isRequired,
     navigationDisplay:PropTypes.bool.isRequired,

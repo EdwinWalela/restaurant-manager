@@ -7,6 +7,7 @@ function OrdersPage(props) {
     return (
         <React.Fragment>
             <Header 
+                
                 userOrder={props.userOrder}
                 handleUserOrderDisplay={props.handleUserOrderDisplay}
                 handleNavigationDisplay={props.handleNavigationDisplay}
@@ -27,26 +28,16 @@ const wrapperStyle = {
 }
 
 OrdersPage.propTypes = {
-    orderNumber:PropTypes.number.isRequired,
-    clientName:PropTypes.string.isRequired,
-    orderStatus:PropTypes.number.isRequired,
-    userOrder:PropTypes.shape({
-        id:PropTypes.number,
-        name:PropTypes.string,
-        price:PropTypes.number,
-        quantity:PropTypes.number
-    }).isRequired,
-    menuItems:PropTypes.arrayOf(PropTypes.shape({
-        id:PropTypes.number,
-        type:PropTypes.string,
-        name:PropTypes.string,
-        ingredients:PropTypes.string,
-        price:PropTypes.number
-    })).isRequired,
-    userOrderDisplay:PropTypes.func.isRequired,
+    userOrderDisplay:PropTypes.bool.isRequired,
     navigationDisplay:PropTypes.bool.isRequired,
     handleUserOrderDisplay:PropTypes.func.isRequired,
-    handleNavigationDisplay:PropTypes.func.isRequired
+    handleNavigationDisplay:PropTypes.func.isRequired,
+    orders:PropTypes.arrayOf(PropTypes.shape({
+        id:PropTypes.number,
+        number:PropTypes.number,
+        name:PropTypes.string,
+        status:PropTypes.number
+    })).isRequired,
 }
 
 

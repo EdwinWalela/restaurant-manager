@@ -36,9 +36,36 @@ module.exports = {
             price:1200
         }
     ],
-    ordersData:{
-        id:'',
-        user:'',
-        status:''
-    }   
+    orders:[
+            {
+                number:21,
+                id:1,
+                user:'edwin',
+                status:0
+            },
+            {
+                number:23,
+                id:2,
+                user:'edwin',
+                status:1
+            },
+            {
+                number:24,
+                id:3,
+                user:'edwin',
+                status:2
+            },
+            {
+                number:25,
+                id:1,
+                user:'edwin',
+                status:3
+            },
+            {
+                number:26,
+                id:1,
+                user:'edwin',
+                status:4
+            }
+    ]   
 }

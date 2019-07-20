@@ -11,7 +11,7 @@ class App extends Component {
     
     state = {
         menuItems:data.menuItemsData,
-        orders:data.ordersData,
+        orders:data.orders,
         userOrder:[],
         userOrderDisplay:false,
         navigationDisplay:false
@@ -108,11 +108,11 @@ class App extends Component {
                     <Route path="/orders" render={
                         ()=> <OrdersPage 
                                 userOrder = {this.state.userOrder}
+                                orders = {this.state.orders}
                                 handleNavigationDisplay = {this.handleNavigationDisplay}
                                 handleUserOrderDisplay = {this.handleUserOrderDisplay}
                                 navigationDisplay = {this.state.navigationDisplay}
                                 userOrderDisplay = {this.state.userOrderDisplay}
-                                menuItems = {this.state.menuItems}
                             />
                     } />
                     <Footer />

@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <div style={footerStyle}>
-           <p>Made with love by <a href="#">Edwin Walela</a></p>
+           <p>Made with love by Edwin Walela</p>
         </div>
     )
 }
