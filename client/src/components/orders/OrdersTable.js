@@ -28,6 +28,8 @@ function OrdersTable(props) {
             order.eta = 0;
             order.status = "Ready"
             return order;
+        }else{
+            return order;
         }
 
     })
@@ -41,7 +43,7 @@ function OrdersTable(props) {
                             <td style={tableDataStyle}># {order.number}</td>
                             <td style={tableDataStyle}>{order.user}</td>
                             <td style={tableDataStyle}>{order.status}</td>
-                            <td style={tableDataStyle}>{order.eta != 0 ? `${order.eta} minutes` :'' }</td>
+                            <td style={tableDataStyle}>{order.eta !== 0 ? `${order.eta} minutes` :'' }</td>
                         </tr>
                     ))}
                 </tbody>
@@ -62,7 +64,7 @@ const tableDataStyle = {
     color: '#999',
     textTransform:'capitalize',
     border: '1px solid #eee',
-    padding: '12px 35px',
+    padding: '15px',
     borderCollapse: 'collapse'
 }
 

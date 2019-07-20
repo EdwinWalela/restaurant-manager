@@ -25,17 +25,19 @@ const headerStyle = {
 }
 
 const titleStyle = {
-    padding:'20px',
-    textAlign: 'center'
+    padding:'20px 0 20px 100px',
+    fontSize:'1.5em',
+    textAlign: 'center',
 }
 
 const orderButtonStyle = {
-    display:'block',
+    position:'relative',
+    float:'right',
+    display:'inline-block',
     margin:'10px',
     fontSize: '2em',
     color:'#333',
     padding:'5px',
-    float: 'right',
     transition:'all linear .1s'
 }
 

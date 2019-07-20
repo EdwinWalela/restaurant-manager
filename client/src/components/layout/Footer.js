@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <div style={footerStyle}>
-           <p>Made with love by Edwin Walela</p>
+           <p>Made with <i className="fas fa-heart"> </i> by  <a target="_blank" rel="noopener noreferrer" href="https://github.com/EdwinWalela/restaurant-manager">Edwin Walela.</a></p>
         </div>
     )
 }

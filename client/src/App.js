@@ -5,6 +5,7 @@ import data from './data';
 
 import MenuPage from './components/menu/MenuPage';
 import OrdersPage from './components/orders/OrdersPage';
+import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
 class App extends Component {
@@ -93,6 +94,15 @@ class App extends Component {
         return (
             <Router>
                 <div>
+                    <Route exact path="/" render={
+                        ()=> <Header 
+                            userOrder = {this.state.userOrder}
+                            handleNavigationDisplay = {this.handleNavigationDisplay}
+                            handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                            navigationDisplay = {this.state.navigationDisplay}
+                            userOrderDisplay = {this.state.userOrderDisplay}
+                        />
+                    }/>
                     <Route path="/our-menu" render={
                         ()=> <MenuPage
                                 userOrder = {this.state.userOrder}
