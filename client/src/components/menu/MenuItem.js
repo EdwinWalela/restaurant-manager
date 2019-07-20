@@ -51,11 +51,11 @@ MenuItem.propTypes = {
     handleUserOrderCount:PropTypes.func.isRequired,
     handleUserOrderChange:PropTypes.func.isRequired,
     foodItem:PropTypes.objectOf(PropTypes.shape({
-        id:Number,
-        type:String,
-        name:String,
-        ingredients:String,
-        price:Number
+        id:PropTypes.number,
+        type:PropTypes.string,
+        name:PropTypes.string,
+        ingredients:PropTypes.string,
+        price:PropTypes.number
     }))
 }
 

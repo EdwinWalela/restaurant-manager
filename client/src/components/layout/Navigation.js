@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
-function UserOrders(props){
+function UserOrders(){
     return (
         <div style={userOrderStyle}>
             <h3 style={titleStyle}> Reactive Restaurant</h3>

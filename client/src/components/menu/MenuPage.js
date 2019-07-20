@@ -57,17 +57,17 @@ const menuWrapperStyle = {
 // PropTypes
 MenuPage.propTypes = {
     userOrder:PropTypes.shape({
-        id:Number,
-        name:String,
-        price:Number,
-        quantity:Number
+        id:PropTypes.number,
+        name:PropTypes.string,
+        price:PropTypes.number,
+        quantity:PropTypes.number
     }).isRequired,
     menuItems:PropTypes.arrayOf(PropTypes.shape({
-        id:Number,
-        type:String,
-        name:String,
-        ingredients:String,
-        price:Number
+        id:PropTypes.number,
+        type:PropTypes.string,
+        name:PropTypes.string,
+        ingredients:PropTypes.string,
+        price:PropTypes.mumber
     })).isRequired,
     handleUserOrderCount:PropTypes.func.isRequired,
     handleUserOrderChange:PropTypes.func.isRequired,

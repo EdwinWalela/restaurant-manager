@@ -41,10 +41,10 @@ const orderButtonStyle = {
 
 Header.propTypes = {
     userOrder:PropTypes.shape({
-        id:Number,
-        name:String,
-        price:Number,
-        quantity:Number
+        id:PropTypes.number,
+        name:PropTypes.string,
+        price:PropTypes.number,
+        quantity:PropTypes.number
     }).isRequired,
     title:PropTypes.string,
     userOrderDisplay:PropTypes.bool.isRequired,
