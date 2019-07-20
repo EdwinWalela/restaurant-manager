@@ -115,11 +115,12 @@ class App extends Component {
                                 userOrderDisplay = {this.state.userOrderDisplay}
                             />
                     } />
-                    <Footer />
                 </div>
+                <Footer />
             </Router>
         )
     }
 }
+
 
 export default App;

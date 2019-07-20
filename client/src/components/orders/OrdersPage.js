@@ -2,21 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Header from '../layout/Header';
+import OrdersTable from './OrdersTable';
 
 function OrdersPage(props) {
     return (
         <React.Fragment>
             <Header 
-                
                 userOrder={props.userOrder}
                 handleUserOrderDisplay={props.handleUserOrderDisplay}
                 handleNavigationDisplay={props.handleNavigationDisplay}
                 userOrderDisplay={props.userOrderDisplay}
                 navigationDisplay={props.navigationDisplay}
-                title="The Menu"
+                title="Orders"
             />
             <div style={wrapperStyle}>
-                <h1>This is the orders page. Customers will be able to see their orders here.</h1>
+                <OrdersTable orders={props.orders}/>
             </div>
         </React.Fragment>
     )
@@ -35,7 +35,7 @@ OrdersPage.propTypes = {
     orders:PropTypes.arrayOf(PropTypes.shape({
         id:PropTypes.number,
         number:PropTypes.number,
-        name:PropTypes.string,
+        user:PropTypes.string,
         status:PropTypes.number
     })).isRequired,
 }

@@ -9,7 +9,7 @@ function Footer() {
 }
 
 const footerStyle = {
-    marginTop: '100px',
+    marginTop: '200px',
     textAlign:'center',
     background:'#555',
     padding:'20px',
