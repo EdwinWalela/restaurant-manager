@@ -55,6 +55,7 @@ function OrdersTable(props) {
 const tableStyle = {
     margin: '25px auto',
     borderCollapse: 'collapse',
+    width:'80%',
     border: '1px solid #eee',
     borderBottom:'2px solid #FF1053',
     boxShadow: '0px 0px 20px rgba(0,0,0,0.10)'
