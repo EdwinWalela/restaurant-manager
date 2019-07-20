@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function UserOrders(){
+function Navigation(){
     return (
-        <div style={userOrderStyle}>
+        <div style={navigationStyle}>
             <h3 style={titleStyle}> Reactive Restaurant</h3>
             <NavLink to="/orders"><li style={listStyle}>Orders</li></NavLink>
             <NavLink to="/our-menu"><li style={listStyle}>Menu</li></NavLink>
@@ -17,7 +17,7 @@ function UserOrders(){
     )
 }
 
-const userOrderStyle = {
+const navigationStyle = {
     right:'0vw',
     position:'absolute',
     background: '#333',
@@ -49,5 +49,5 @@ const socialIconStyle = {
     margin:'15px',
 }
 
-export default UserOrders;
+export default Navigation;
 
