@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Header from '../layout/Header';
+import UserOrder from './UserOrder';
 
 function OrderControl(props) {
     return (
@@ -14,9 +15,16 @@ function OrderControl(props) {
                 navigationDisplay={props.navigationDisplay}
                 title="Order Control"
             />
-            <h1>This is the order control area</h1>
+            <div style={ordersWrapperStyle}>
+                <UserOrder order={props.orders[0]}/>
+            </div>
         </React.Fragment>
     )
+}
+
+const ordersWrapperStyle = {
+    margin:'100px auto',
+    maxWidth:'800px'
 }
 
 OrderControl.propTypes = {
