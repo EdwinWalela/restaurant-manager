@@ -9,6 +9,7 @@ function UserOrder(props) {
         <div style={orderContainerStyle}>
             <h1 style={orderNumberStyle}># {order.number}</h1>
             <p style={orderItemsStyle}> Fries X 2 <br/> soda X 2  <br/>Combo Special Deli X 2 </p>
+            <button style={collectedButton}>Complete</button>
             <ProgressBar status={order.status} />
         </div>
     )
@@ -39,6 +40,16 @@ const orderItemsStyle = {
     margin:'0px 20px',
     background:'#eee',
     borderRadius:'5px'
+}
+
+const collectedButton = {
+    padding:'5px 10px',
+    borderRadius:'10px',
+    margin:'0px auto',
+    display:'inline-block',
+    border:'none',
+    background:'#FF1053',
+    color:'#fff'
 }
 
 UserOrder.propTypes = {
