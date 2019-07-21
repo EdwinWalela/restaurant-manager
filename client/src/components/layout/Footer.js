@@ -9,7 +9,7 @@ function Footer() {
 }
 
 const footerStyle = {
-    position:'fixed',
+    position:'relative',
     width:'100%',
     bottom:'0',
     marginTop: '200px',

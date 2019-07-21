@@ -94,7 +94,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div>
+                <div style={{minHeight:'60vh'}}>
                     <Route exact path="/" render={
                         ()=> <Header 
                             userOrder = {this.state.userOrder}
