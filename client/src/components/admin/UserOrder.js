@@ -16,7 +16,7 @@ function UserOrder(props) {
 
 const orderContainerStyle = {
     borderRadius: '5px',
-    margin:'10px auto',
+    margin:'40px auto',
     width:'100%',
     maxWidth:'600px',
     borderBottom:'solid 1px #fff',
