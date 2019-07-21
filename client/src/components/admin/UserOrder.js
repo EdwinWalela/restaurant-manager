@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import ProgressBar from './ProgressBar';
 
 function UserOrder(props) {
-    let order = props.order
+    let order = props.order;
     return (
         <div style={orderContainerStyle}>
             <h1 style={orderNumberStyle}># {order.number}</h1>
             <p style={orderItemsStyle}> Fries X 2 <br/> soda X 2  <br/>Combo Special Deli X 2 </p>
-            <ProgressBar status='4' />
+            <ProgressBar status={order.status} />
         </div>
     )
 }
@@ -42,7 +42,12 @@ const orderItemsStyle = {
 }
 
 UserOrder.propTypes = {
-
+    order:PropTypes.shape({
+        id:PropTypes.number,
+        number:PropTypes.number,
+        user:PropTypes.string,
+        status:PropTypes.number
+    }).isRequired,
 }
 
 export default UserOrder

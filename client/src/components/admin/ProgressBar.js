@@ -68,11 +68,11 @@ class ProgressBar extends Component {
         let status = this.props.status;
         return (
             <div style={progressBarstyle}>
-                <span style={status === '0' ? this.pendingStyle() : defaultStatusStyle}>Pending</span>
-                <span style={status === '1' ? this.pereparationStyle() : defaultStatusStyle}>Preparation</span>
-                <span style={status === '2' ? this.ovenStyle() : defaultStatusStyle}>In Oven</span>
-                <span style={status === '3' ? this.checkStyle() : defaultStatusStyle}>Check</span>
-                <span style={status === '4' ? this.readyStyle() : defaultStatusStyle}>Ready</span>
+                <span style={status === 0 ? this.pendingStyle() : defaultStatusStyle}>Pending</span>
+                <span style={status === 1 ? this.pereparationStyle() : defaultStatusStyle}>Preparation</span>
+                <span style={status === 2 ? this.ovenStyle() : defaultStatusStyle}>In Oven</span>
+                <span style={status === 3 ? this.checkStyle() : defaultStatusStyle}>Check</span>
+                <span style={status === 4 ? this.readyStyle() : defaultStatusStyle}>Ready</span>
             </div>
         )
     }
@@ -98,7 +98,7 @@ const progressBarstyle = {
 }
 
 ProgressBar.propTypes = {
-
+    status:PropTypes.number.isRequired
 }
 
 export default ProgressBar

@@ -5,6 +5,7 @@ import Header from '../layout/Header';
 import UserOrder from './UserOrder';
 
 function OrderControl(props) {
+    let orders = props.orders;
     return (
         <React.Fragment>
             <Header  
@@ -16,7 +17,9 @@ function OrderControl(props) {
                 title="Order Control"
             />
             <div style={ordersWrapperStyle}>
-                <UserOrder order={props.orders[0]}/>
+               {orders.map(order=>(
+                    <UserOrder key={order.id} order={order}/>
+               ))}
             </div>
         </React.Fragment>
     )
