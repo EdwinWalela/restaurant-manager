@@ -29,18 +29,65 @@ class ProgressBar extends Component {
         return style;
     }
 
+    pendingStyle = () =>{
+         return {
+            background:'#FE5F55',
+            ...defaultStatusStyle
+        }
+    }
+
+    pereparationStyle = () =>{
+        return {
+            background:'#507DBC',
+            ...defaultStatusStyle
+        }
+    }
+
+    ovenStyle = () =>{
+        return {
+            background:'orange',
+            ...defaultStatusStyle
+        }
+    }
+
+    checkStyle = () =>{
+        return {
+            background:'#FFBA08',
+            ...defaultStatusStyle
+        }
+    }
+
+    readyStyle = () =>{
+        return {
+            background:'#5FBB97',
+            ...defaultStatusStyle
+        }
+    }
+
     render(){
+        let status = this.props.status;
         return (
             <div style={progressBarstyle}>
-                <span style={this.levelStyle(0)}>Pending</span>
-                <span style={this.levelStyle(1)}>Preparation</span>
-                <span style={this.levelStyle(2)}>In Oven</span>
-                <span style={this.levelStyle(3)}>Check</span>
-                <span style={this.levelStyle(4)}>Ready</span>
+                <span style={status === '0' ? this.pendingStyle() : defaultStatusStyle}>Pending</span>
+                <span style={status === '1' ? this.pereparationStyle() : defaultStatusStyle}>Preparation</span>
+                <span style={status === '2' ? this.ovenStyle() : defaultStatusStyle}>In Oven</span>
+                <span style={status === '3' ? this.checkStyle() : defaultStatusStyle}>Check</span>
+                <span style={status === '4' ? this.readyStyle() : defaultStatusStyle}>Ready</span>
             </div>
         )
     }
 }
+
+const defaultStatusStyle = {
+    display:'inline-block',
+    padding:'4px',
+    borderRadius:'5px',
+    width:'20%',
+    color:'#fff',
+    fontSize:'0.8em',
+    cursor:'pointer'
+}
+
 
 const progressBarstyle = {
     textAlign:'center',

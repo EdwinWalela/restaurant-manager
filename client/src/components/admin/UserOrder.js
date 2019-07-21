@@ -9,7 +9,7 @@ function UserOrder(props) {
         <div style={orderContainerStyle}>
             <h1 style={orderNumberStyle}># {order.number}</h1>
             <p style={orderItemsStyle}> Fries X 2 <br/> soda X 2  <br/>Combo Special Deli X 2 </p>
-            <ProgressBar />
+            <ProgressBar status='4' />
         </div>
     )
 }
