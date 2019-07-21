@@ -9,7 +9,7 @@ function UserOrder(props) {
         <div style={orderContainerStyle}>
             <h1 style={orderNumberStyle}># {order.number}</h1>
             <p style={orderItemsStyle}> Fries X 2 <br/> soda X 2  <br/>Combo Special Deli X 2 </p>
-            <button style={collectedButton}>Complete</button>
+            <button style={collectedButton} onClick={props.handleOrderCompletion.bind(this,order.id)}>Complete</button>
             <ProgressBar status={order.status} />
         </div>
     )
@@ -59,6 +59,7 @@ UserOrder.propTypes = {
         user:PropTypes.string,
         status:PropTypes.number
     }).isRequired,
+    handleOrderCompletion:PropTypes.func.isRequired
 }
 
 export default UserOrder

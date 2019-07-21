@@ -18,7 +18,11 @@ function OrderControl(props) {
             />
             <div style={ordersWrapperStyle}>
                {orders.map(order=>(
-                    <UserOrder key={order.id} order={order}/>
+                    <UserOrder 
+                        key={order.id}
+                        order={order}
+                        handleOrderCompletion={props.handleOrderCompletion}
+                    />
                ))}
             </div>
         </React.Fragment>
@@ -35,6 +39,7 @@ OrderControl.propTypes = {
     navigationDisplay:PropTypes.bool.isRequired,
     handleUserOrderDisplay:PropTypes.func.isRequired,
     handleNavigationDisplay:PropTypes.func.isRequired,
+    handleOrderCompletion:PropTypes.func.isRequired,
     orders:PropTypes.arrayOf(PropTypes.shape({
         id:PropTypes.number,
         number:PropTypes.number,

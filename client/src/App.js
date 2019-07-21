@@ -52,6 +52,14 @@ class App extends Component {
        
        return count ? count.quantity : 0
     }
+    // admin mark order as complete
+    handleOrderCompletion = (id) =>{
+        this.setState({
+            orders:this.state.orders.filter(order=>{
+                return order.id !== id;
+            })
+        })
+    }
 
     // When a menu-item's counter changes
     handleUserOrderChange = (id,mode) =>{
@@ -134,6 +142,7 @@ class App extends Component {
                                 handleUserOrderDisplay = {this.handleUserOrderDisplay}
                                 navigationDisplay = {this.state.navigationDisplay}
                                 userOrderDisplay = {this.state.userOrderDisplay}
+                                handleOrderCompletion = {this.handleOrderCompletion}
                         />
                     } />
                 </div>
