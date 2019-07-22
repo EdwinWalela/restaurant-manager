@@ -10,6 +10,7 @@ function OrdersPage(props) {
             <Header 
                 userOrder={props.userOrder}
                 handleUserOrderDisplay={props.handleUserOrderDisplay}
+                handleOrderCreation={props.handleOrderCreation}                         
                 handleNavigationDisplay={props.handleNavigationDisplay}
                 userOrderDisplay={props.userOrderDisplay}
                 navigationDisplay={props.navigationDisplay}
@@ -32,6 +33,8 @@ OrdersPage.propTypes = {
     navigationDisplay:PropTypes.bool.isRequired,
     handleUserOrderDisplay:PropTypes.func.isRequired,
     handleNavigationDisplay:PropTypes.func.isRequired,
+    handleOrderCreation:PropTypes.func.isRequired
+    ,
     orders:PropTypes.arrayOf(PropTypes.shape({
         id:PropTypes.number,
         number:PropTypes.number,

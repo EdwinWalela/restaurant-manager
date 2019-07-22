@@ -21,6 +21,7 @@ function MenuPage(props) {
                 userOrder={props.userOrder}
                 handleUserOrderDisplay={props.handleUserOrderDisplay}
                 handleNavigationDisplay={props.handleNavigationDisplay}
+                handleOrderCreation={props.handleOrderCreation}
                 userOrderDisplay={props.userOrderDisplay}
                 navigationDisplay={props.navigationDisplay}
                 title="The Menu"
@@ -74,7 +75,8 @@ MenuPage.propTypes = {
     userOrderDisplay:PropTypes.func.isRequired,
     navigationDisplay:PropTypes.bool.isRequired,
     handleUserOrderDisplay:PropTypes.func.isRequired,
-    handleNavigationDisplay:PropTypes.func.isRequired
+    handleNavigationDisplay:PropTypes.func.isRequired,
+    handleOrderCreation:PropTypes.func.isRequired
 }
 
 export default MenuPage;

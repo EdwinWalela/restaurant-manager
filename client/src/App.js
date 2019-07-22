@@ -113,6 +113,28 @@ class App extends Component {
         })
     }
 
+    handleOrderCreation = () =>{
+        // Get number and id of last order
+        let number = this.state.orders[this.state.orders.length-1].number;
+        let id = this.state.orders[this.state.orders.length-1].id;
+        // Generate number for new order
+        number++;
+        id++;
+        // create new order
+        let items = this.state.userOrder;
+        let newOrder = {
+            number,
+            id,
+            user:'mumu',
+            items
+        }
+        // Update state
+        this.setState({
+            orders:this.state.orders.push(newOrder),
+            userOrder:[]
+        })
+    }
+
     render() {
         return (
             <Router>
@@ -120,6 +142,7 @@ class App extends Component {
                     <Route exact path="/" render={
                         ()=> <Header 
                             userOrder = {this.state.userOrder}
+                            handleOrderCreation = {this.handleOrderCreation}
                             handleNavigationDisplay = {this.handleNavigationDisplay}
                             handleUserOrderDisplay = {this.handleUserOrderDisplay}
                             navigationDisplay = {this.state.navigationDisplay}
@@ -131,6 +154,7 @@ class App extends Component {
                                 userOrder = {this.state.userOrder}
                                 handleNavigationDisplay = {this.handleNavigationDisplay}
                                 handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                                handleOrderCreation={this.handleOrderCreation}
                                 navigationDisplay = {this.state.navigationDisplay}
                                 userOrderDisplay = {this.state.userOrderDisplay}
                                 menuItems = {this.state.menuItems}
@@ -143,6 +167,7 @@ class App extends Component {
                                 userOrder = {this.state.userOrder}
                                 orders = {this.state.orders}
                                 handleNavigationDisplay = {this.handleNavigationDisplay}
+                                handleOrderCreation={this.handleOrderCreation}
                                 handleUserOrderDisplay = {this.handleUserOrderDisplay}
                                 navigationDisplay = {this.state.navigationDisplay}
                                 userOrderDisplay = {this.state.userOrderDisplay}

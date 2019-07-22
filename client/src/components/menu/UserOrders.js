@@ -19,7 +19,7 @@ function UserOrders(props){
                 })}
                 
                 <h3 style={totalStyle}>Total : Ksh.{total}</h3>
-                {items.length !== 0 ? <button style={buttonStyle}>Order Now</button> : '' }
+                {items.length !== 0 ? <button style={buttonStyle} onClick={props.handleOrderCreation} >Order Now</button> : '' }
             </div>
         )
 }
@@ -72,7 +72,8 @@ UserOrders.propTypes = {
         name:PropTypes.string,
         price:PropTypes.number,
         quantity:PropTypes.number
-    })
+    }).isRequired,
+    handleOrderCreation:PropTypes.func.isRequired
 }
 
 export default UserOrders;

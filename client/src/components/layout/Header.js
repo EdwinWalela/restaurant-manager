@@ -10,7 +10,7 @@ function Header(props) {
             <i style={orderButtonStyle} onClick={props.handleNavigationDisplay} className="fa fa-bars" ></i>
             <i style={orderButtonStyle} onClick={props.handleUserOrderDisplay} className="fas fa-shopping-cart"></i>
             <h1 style={titleStyle}>{props.title}</h1>
-            {props.userOrderDisplay ? <UserOrders items={props.userOrder} /> : ''}
+            {props.userOrderDisplay ? <UserOrders items={props.userOrder} handleOrderCreation={props.handleOrderCreation}/> : ''}
             {props.navigationDisplay ? <Navigation /> : ''}
         </div>
     )
@@ -52,7 +52,8 @@ Header.propTypes = {
     userOrderDisplay:PropTypes.bool.isRequired,
     navigationDisplay:PropTypes.bool.isRequired,
     handleUserOrderDisplay:PropTypes.func.isRequired,
-    handleNavigationDisplay:PropTypes.func.isRequired
+    handleNavigationDisplay:PropTypes.func.isRequired,
+    handleOrderCreation:PropTypes.func.isRequired
 }
 
 export default Header
