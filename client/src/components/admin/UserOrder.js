@@ -16,7 +16,11 @@ function UserOrder(props) {
                 ))}
             </p>
             <button style={collectedButton} onClick={props.handleOrderCompletion.bind(this,order.id)}>Complete</button>
-            <ProgressBar status={order.status} />
+            <ProgressBar
+                orderId={order.id}
+                status={order.status}
+                handleOrderStatusUpdate ={props.handleOrderStatusUpdate}
+            />
         </div>
     )
 }
@@ -70,7 +74,8 @@ UserOrder.propTypes = {
             quantity:PropTypes.number
         }))
     }).isRequired,
-    handleOrderCompletion:PropTypes.func.isRequired
+    handleOrderCompletion:PropTypes.func.isRequired,
+    handleOrderStatusUpdate:PropTypes.func.isRequired
 }
 
 export default UserOrder

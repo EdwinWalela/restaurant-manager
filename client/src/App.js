@@ -99,6 +99,20 @@ class App extends Component {
         })
     } 
 
+    handleOrderStatusUpdate = (status,orderId) =>{
+        let order = this.state.orders.find(order=>{
+            return order.id === orderId
+        })
+        order.status = status
+        let orders = this.state.orders.filter(order=>{
+            return order.id !== orderId
+        });
+        orders.push(order)
+        this.setState({
+            orders:orders
+        })
+    }
+
     render() {
         return (
             <Router>
@@ -143,6 +157,7 @@ class App extends Component {
                                 navigationDisplay = {this.state.navigationDisplay}
                                 userOrderDisplay = {this.state.userOrderDisplay}
                                 handleOrderCompletion = {this.handleOrderCompletion}
+                                handleOrderStatusUpdate ={this.handleOrderStatusUpdate}
                         />
                     } />
                 </div>

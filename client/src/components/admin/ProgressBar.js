@@ -39,15 +39,20 @@ class ProgressBar extends Component {
         }
     }
 
+    changeOrderStatus = (status,orderId) =>{
+        this.props.handleOrderStatusUpdate(status,orderId)
+    }
+
     render(){
         let status = this.props.status;
+        let id = this.props.orderId
         return (
             <div style={progressBarstyle}>
                 <span style={status >= 0 ? this.pendingStyle() : defaultStatusStyle}>Pending</span>
-                <span style={status >= 1 ? this.pereparationStyle() : defaultStatusStyle}>Preparation</span>
-                <span style={status >= 2 ? this.ovenStyle() : defaultStatusStyle}>In Oven</span>
-                <span style={status >= 3 ? this.checkStyle() : defaultStatusStyle}>Quality Check</span>
-                <span style={status >= 4 ? this.readyStyle() : defaultStatusStyle}>Ready</span>
+                <span onClick={this.changeOrderStatus.bind(this,1,id)} style={status >= 1 ? this.pereparationStyle() : defaultStatusStyle}>Preparation</span>
+                <span onClick={this.changeOrderStatus.bind(this,2,id)} style={status >= 2 ? this.ovenStyle() : defaultStatusStyle}>In Oven</span>
+                <span onClick={this.changeOrderStatus.bind(this,3,id)} style={status >= 3 ? this.checkStyle() : defaultStatusStyle}>Quality Check</span>
+                <span onClick={this.changeOrderStatus.bind(this,4,id)} style={status >= 4 ? this.readyStyle() : defaultStatusStyle}>Ready</span>
             </div>
         )
     }
@@ -70,7 +75,9 @@ const progressBarstyle = {
 }
 
 ProgressBar.propTypes = {
-    status:PropTypes.number.isRequired
+    orderId:PropTypes.number,
+    status:PropTypes.number.isRequired,
+    handleOrderStatusUpdate:PropTypes.func.isRequired
 }
 
 export default ProgressBar

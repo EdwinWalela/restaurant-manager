@@ -15,13 +15,13 @@ function OrderControl(props) {
                 userOrderDisplay={props.userOrderDisplay}
                 navigationDisplay={props.navigationDisplay}
                 title="Order Control"
-            />
-            <div style={ordersWrapperStyle}>
+            />            <div style={ordersWrapperStyle}>
                {orders.map(order=>(
                     <UserOrder 
                         key={order.id}
                         order={order}
                         handleOrderCompletion={props.handleOrderCompletion}
+                        handleOrderStatusUpdate ={props.handleOrderStatusUpdate}
                     />
                ))}
             </div>
@@ -40,6 +40,7 @@ OrderControl.propTypes = {
     handleUserOrderDisplay:PropTypes.func.isRequired,
     handleNavigationDisplay:PropTypes.func.isRequired,
     handleOrderCompletion:PropTypes.func.isRequired,
+    handleOrderStatusUpdate:PropTypes.func.isRequired,
     orders:PropTypes.arrayOf(PropTypes.shape({
         id:PropTypes.number,
         number:PropTypes.number,
