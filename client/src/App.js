@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import data from './data';
 
+import HomeNavigation from './components/home/HomeNavigation';
 import MenuPage from './components/menu/MenuPage';
 import OrdersPage from './components/orders/OrdersPage';
 import OrderControl from './components/admin/OrderControl';
@@ -140,14 +141,14 @@ class App extends Component {
             <Router>
                 <div style={{minHeight:'60vh'}}>
                     <Route exact path="/" render={
-                        ()=> <Header 
-                            userOrder = {this.state.userOrder}
-                            handleOrderCreation = {this.handleOrderCreation}
-                            handleNavigationDisplay = {this.handleNavigationDisplay}
-                            handleUserOrderDisplay = {this.handleUserOrderDisplay}
-                            navigationDisplay = {this.state.navigationDisplay}
-                            userOrderDisplay = {this.state.userOrderDisplay}
-                        />
+                        ()=> <HomeNavigation 
+                                userOrder = {this.state.userOrder}
+                                handleOrderCreation = {this.handleOrderCreation}
+                                handleNavigationDisplay = {this.handleNavigationDisplay}
+                                handleUserOrderDisplay = {this.handleUserOrderDisplay}
+                                navigationDisplay = {this.state.navigationDisplay}
+                                userOrderDisplay = {this.state.userOrderDisplay}
+                            />
                     }/>
                     <Route path="/our-menu" render={
                         ()=> <MenuPage

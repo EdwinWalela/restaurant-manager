@@ -41,7 +41,7 @@ module.exports = {
                 number:21,
                 id:1,
                 user:'edwin',
-                status:0,
+                status:1,
                 items:[
                     {
                         id:"fries",
@@ -57,7 +57,66 @@ module.exports = {
                     }
                 ]
             },
-            
+            {
+                number:22,
+                id:2,
+                user:'mumu',
+                status:2,
+                items:[
+                    {
+                        id:"fries",
+                        quantity:2
+                    },
+                    {
+                        id:'super combo',
+                        quantity:1
+                    }
+                ]
+            },
+            {
+                number:23,
+                id:3,
+                user:'patrick',
+                status:2,
+                items:[
+                    {
+                        id:"fries",
+                        quantity:2
+                    },
+                    {
+                        id:'soda',
+                        quantity:1
+                    },
+                    {
+                        id:'super combo',
+                        quantity:1
+                    }
+                ]
+            },
+            {
+                number:24,
+                id:4,
+                user:'susan',
+                status:3,
+                items:[
+                    {
+                        id:"fries",
+                        quantity:1
+                    }
+                ]
+            },
+            {
+                number:25,
+                id:5,
+                user:'Elijah',
+                status:4,
+                items:[
+                    {
+                        id:"fries",
+                        quantity:1
+                    }
+                ]
+            },
     ],
 
 }
