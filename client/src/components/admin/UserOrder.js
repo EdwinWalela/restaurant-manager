@@ -8,7 +8,13 @@ function UserOrder(props) {
     return (
         <div style={orderContainerStyle}>
             <h1 style={orderNumberStyle}># {order.number}</h1>
-            <p style={orderItemsStyle}> Fries X 2 <br/> soda X 2  <br/>Combo Special Deli X 2 </p>
+            <p style={orderItemsStyle}> 
+                {order.items.map(item=>(
+                    <React.Fragment>
+                       {item.id} X {item.quantity}<br/>
+                    </React.Fragment>
+                ))}
+            </p>
             <button style={collectedButton} onClick={props.handleOrderCompletion.bind(this,order.id)}>Complete</button>
             <ProgressBar status={order.status} />
         </div>
@@ -39,7 +45,8 @@ const orderItemsStyle = {
     display:'inline-block',
     margin:'0px 20px',
     background:'#eee',
-    borderRadius:'5px'
+    borderRadius:'5px',
+    textTransform:'capitalize'
 }
 
 const collectedButton = {
@@ -57,7 +64,11 @@ UserOrder.propTypes = {
         id:PropTypes.number,
         number:PropTypes.number,
         user:PropTypes.string,
-        status:PropTypes.number
+        status:PropTypes.number,
+        items:PropTypes.arrayOf(PropTypes.shape({
+            id:PropTypes.string,
+            quantity:PropTypes.number
+        }))
     }).isRequired,
     handleOrderCompletion:PropTypes.func.isRequired
 }

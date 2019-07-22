@@ -41,31 +41,22 @@ module.exports = {
                 number:21,
                 id:1,
                 user:'edwin',
-                status:0
+                status:0,
+                items:[
+                    {
+                        id:"fries",
+                        quantity:2
+                    },
+                    {
+                        id:'soda',
+                        quantity:1
+                    },
+                    {
+                        id:'super combo',
+                        quantity:1
+                    }
+                ]
             },
-            {
-                number:23,
-                id:2,
-                user:'abbie',
-                status:1
-            },
-            {
-                number:24,
-                id:3,
-                user:'john',
-                status:2
-            },
-            {
-                number:25,
-                id:4,
-                user:'patrick',
-                status:3
-            },
-            {
-                number:26,
-                id:5,
-                user:'natalya',
-                status:4
-            }
+            
     ]   
 }

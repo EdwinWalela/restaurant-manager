@@ -44,7 +44,11 @@ OrderControl.propTypes = {
         id:PropTypes.number,
         number:PropTypes.number,
         user:PropTypes.string,
-        status:PropTypes.number
+        status:PropTypes.number,
+        items:PropTypes.arrayOf(PropTypes.shape({
+            id:PropTypes.string,
+            quantity:PropTypes.number
+        }))
     })).isRequired,
 }
 
