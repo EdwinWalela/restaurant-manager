@@ -15,12 +15,15 @@ function UserOrder(props) {
                     </React.Fragment>
                 ))}
             </p>
-            <button style={collectedButton} onClick={props.handleOrderCompletion.bind(this,order.id)}>Complete</button>
+            
             <ProgressBar
                 orderId={order.id}
                 status={order.status}
                 handleOrderStatusUpdate ={props.handleOrderStatusUpdate}
             />
+            <br/>
+            {order.status === 4 ? <button style={collectedButton} onClick={props.handleOrderCompletion.bind(this,order.id)}>Collected</button> : ' '}
+            
         </div>
     )
 }
@@ -28,11 +31,11 @@ function UserOrder(props) {
 const orderContainerStyle = {
     borderRadius: '5px',
     margin:'40px auto',
-    width:'100%',
+    width:'90%',
     maxWidth:'600px',
     borderBottom:'solid 1px #fff',
     padding:'20px',
-    background:'#555'
+    background:'#555',
 }
 
 const orderNumberStyle = {
@@ -45,9 +48,10 @@ const orderNumberStyle = {
 
 const orderItemsStyle = {
     padding:'10px',
-    width:'400px',
+    width:'100%',
+    maxWidth:'350px',
     display:'inline-block',
-    margin:'0px 20px',
+    margin:'20px auto',
     background:'#eee',
     borderRadius:'5px',
     textTransform:'capitalize'
@@ -56,11 +60,10 @@ const orderItemsStyle = {
 const collectedButton = {
     padding:'5px 10px',
     borderRadius:'10px',
-    margin:'0px auto',
-    display:'inline-block',
     border:'none',
     background:'#FF1053',
-    color:'#fff'
+    color:'#fff',
+    margin:'0px'
 }
 
 UserOrder.propTypes = {
