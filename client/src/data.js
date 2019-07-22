@@ -41,7 +41,7 @@ module.exports = {
                 number:21,
                 id:1,
                 user:'edwin',
-                status:0,
+                status:1,
                 items:[
                     {
                         id:"fries",

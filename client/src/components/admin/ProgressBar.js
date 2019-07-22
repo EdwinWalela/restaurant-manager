@@ -6,21 +6,21 @@ class ProgressBar extends Component {
 
     pendingStyle = () =>{
          return {
-            background:'#FE5F55',
+            background:'#540D6E',
             ...defaultStatusStyle
         }
     }
 
     pereparationStyle = () =>{
         return {
-            background:'#507DBC',
+            background:'#347FC4',
             ...defaultStatusStyle
         }
     }
 
     ovenStyle = () =>{
         return {
-            background:'orange',
+            background:'#FE5F55',
             ...defaultStatusStyle
         }
     }
@@ -43,11 +43,11 @@ class ProgressBar extends Component {
         let status = this.props.status;
         return (
             <div style={progressBarstyle}>
-                <span style={status === 0 ? this.pendingStyle() : defaultStatusStyle}>Pending</span>
-                <span style={status === 1 ? this.pereparationStyle() : defaultStatusStyle}>Preparation</span>
-                <span style={status === 2 ? this.ovenStyle() : defaultStatusStyle}>In Oven</span>
-                <span style={status === 3 ? this.checkStyle() : defaultStatusStyle}>Check</span>
-                <span style={status === 4 ? this.readyStyle() : defaultStatusStyle}>Ready</span>
+                <span style={status >= 0 ? this.pendingStyle() : defaultStatusStyle}>Pending</span>
+                <span style={status >= 1 ? this.pereparationStyle() : defaultStatusStyle}>Preparation</span>
+                <span style={status >= 2 ? this.ovenStyle() : defaultStatusStyle}>In Oven</span>
+                <span style={status >= 3 ? this.checkStyle() : defaultStatusStyle}>Quality Check</span>
+                <span style={status >= 4 ? this.readyStyle() : defaultStatusStyle}>Ready</span>
             </div>
         )
     }
@@ -55,21 +55,18 @@ class ProgressBar extends Component {
 
 const defaultStatusStyle = {
     display:'inline-block',
+    borderRight:'solid 1px',
     padding:'4px',
-    borderRadius:'5px',
     width:'20%',
     color:'#fff',
     fontSize:'0.8em',
     cursor:'pointer'
 }
 
-
 const progressBarstyle = {
     textAlign:'center',
-    margin:'20px auto 20px 120px',
-    width:'400px',
-    background:'',
-    borderRadius:'5px',
+    margin:'20px auto 0px auto',
+    width:'100%',
 }
 
 ProgressBar.propTypes = {
