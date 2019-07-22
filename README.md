@@ -10,13 +10,6 @@ Ensure Node and npm are installed on your machine
 2. Run `npm install --save`
 3. Run `npm start`
 
-# Components
-1. OrderPage
-2. FoodSection
-3. MenuItem
-4. ItemCounter
-5. UserOrder
-
 # State
 ## MenuItems
 ```js
