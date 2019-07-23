@@ -1,5 +1,7 @@
 import React,{ Component } from 'react';
 import {BrowserRouter as Router, Route } from 'react-router-dom';
+import Axios from 'axios';
+
 import './App.css';
 import data from './data';
 
@@ -7,13 +9,12 @@ import HomeNavigation from './components/home/HomeNavigation';
 import MenuPage from './components/menu/MenuPage';
 import OrdersPage from './components/orders/OrdersPage';
 import OrderControl from './components/admin/OrderControl';
-import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
 class App extends Component {
     
     state = {
-        menuItems:data.menuItemsData,
+        menuItems:[],
         orders:data.orders,
         userOrder:[],
         userOrderDisplay:false,
@@ -133,6 +134,14 @@ class App extends Component {
         this.setState({
             orders:this.state.orders.push(newOrder),
             userOrder:[]
+        })
+    }
+
+    async componentWillMount(){
+        let res =  await Axios.get("http://localhost:5000/api/menu");
+        let menuItems = res.data.menuItems;
+        this.setState({
+            menuItems
         })
     }
 
