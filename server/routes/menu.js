@@ -93,6 +93,7 @@ router.put('/:id',async(req,res)=>{
             type:updatedItem.type,
             name:updatedItem.name,
             price:updatedItem.price,
+            ingredients:updatedItem.ingredients || ,
         })
     } catch (err) {
         res.status(500).send({
