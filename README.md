@@ -1,6 +1,10 @@
 # Restaurant Management Application
 This is a progressive web-app whose purpose is to assist in day-to-day operations in a restaurant e.g making and tracking of user orders
 
+## Documentation
+[API Documentation](https://documenter.getpostman.com/view/4654837/SVSPp7C4?version=latest)
+
+###
 The goal is to develop a full stack application using React and NodeJs (with Express). Initially state will be managed by Component State (Application Level State and Component Level State). Later on in development Redux will be used as the state manager.
 
 ## Enviroment Set-up
