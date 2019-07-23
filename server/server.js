@@ -16,6 +16,9 @@ mongoose.connection.once('open',()=>{
         console.log('connection error\n',err)
     })
 
+    
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 app.use('/api/menu',menuRoutes);
 
 app.get('/',(req,res)=>{

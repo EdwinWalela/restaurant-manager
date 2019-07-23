@@ -1,10 +1,8 @@
 const router = require("express").Router();
 const MenuItems = require("../models/menuItem");
 
-router.get('/',async(req,res,next)=>{
+router.get('/',async(req,res)=>{
     let menuItems=[];
-    let error;
-
     try{ 
        menuItems = await MenuItems.find({});
     }catch(err){
@@ -15,8 +13,8 @@ router.get('/',async(req,res,next)=>{
     }
     
     res.json({
-        menuItems,
-        count:menuItems.length
+        count:menuItems.length,
+        menuItems
     })
 })
 
@@ -37,6 +35,33 @@ router.get('/:id',async(req,res)=>{
     res.json({
         menuItem
     })
+})
+
+router.post('/',async(req,res)=>{
+    console.log(req.body)
+    let body = req.body;
+
+    let newItem = {
+        type:body.type,
+        name:body.name,
+        ingredients:body.indgredients,
+        price:Number(body.price)
+    }
+
+    try{
+        await new MenuItems(newItem).save();
+    }
+    catch(err){
+        res.status(500).send({
+            error:err.message
+        });
+        return;
+    }
+
+    res.json({
+        msg:'new item created'
+    })
+
 })
 
 module.exports = router;
