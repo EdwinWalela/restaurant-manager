@@ -9,7 +9,6 @@ const DB_URI = "mongodb://admin:admin123@ds127535.mlab.com:27535/restaurantmanag
 const app = express();
 
 mongoose.connect(DB_URI,{useNewUrlParser:true});
-
 mongoose.connection.once('open',()=>{
         console.log('connected to db')
     })
@@ -19,7 +18,7 @@ mongoose.connection.once('open',()=>{
 
 app.use('/api/menu',menuRoutes);
 
-app.get('/',async (req,res)=>{
+app.get('/',(req,res)=>{
     res.json({
         data:'hello world'
     })
